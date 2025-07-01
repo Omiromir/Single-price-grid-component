@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --primary-cyan: hsl(179, 62%, 43%);
+  --primary-cyan-lighter: hsl(179, 54%, 48%);
+  --primary-yellow: hsl(71, 73%, 54%);
+  --neutral-light-gray: hsl(204, 43%, 93%);
+  --neutral-gray: hsl(204, 43%, 93%);
+  --neutral-grayish-blue: hsl(218, 22%, 67%);
+  --font-family: "Karla", sans-serif;
+
+  --font-size: 16px;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-normal);
+  color: var(--neutral-grayish-blue);
+  background-color: var(--neutral-light-gray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.container {
+  border-radius: 0.8rem;
+  background-color: var(--white);
+  max-width: 48rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem;
+}
+
+.hero__title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-cyan);
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  color: var(--primary-yellow);
+  font-weight: var(--font-weight-bold);
+}
+
+.hero__description {
+  font-size: 1rem;
+  color: var(--neutral-grayish-blue);
+  line-height: 2;
+}
+
+.plan {
+  display: flex;
+  color: var(--white);
+}
+
+.plan__subscription,
+.plan__features {
+  flex: 1;
+}
+
+.plan__subscription {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  gap: 2rem;
+  background-color: var(--primary-cyan);
+}
+
+.plan__title {
+  font-size: 1.25rem;
+}
+
+
+.plan__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: var(--font-weight-normal);
+  margin-bottom: 1rem;
+}
+
+.plan__price span {
+  font-size: 2.125rem;
+  color: var(--white);
+  font-weight: var(--font-weight-bold);
+}
+
+.plan__note {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.plan__btn {
+    background-color: var(--primary-yellow);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    color: var(--white);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.plan__btn:hover {
+  background-color: hsl(71, 73%, 64%);
+}
+
+.plan__features {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  gap: 1.25rem;
+  background-color: var(--primary-cyan-lighter);
+}
+
+.plan__features-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 768px) {
+  .plan {
+    flex-direction: column;
+  }
+
+  .hero__title{
+    font-size: 1.25rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .hero__description {
+    font-size: 0.875rem;
+  }
+
+  .plan__title {
+    font-size: 1.125rem;
+  }
+
+  .plan__note {
+    font-size: 0.875rem;
+  }
+}
+
